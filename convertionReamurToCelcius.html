@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <title>Convert Reamur To Celcius</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="m-3">Convert Reamur To Celcius</h1>
+    <label for="reamurValue" class="m-3">Silahkan input nilai ˚Reamur = </label>
+    <input type="text" name="reamur" id="reamur" class="mr-3">
+    <button onclick="convertReamurToCelcius()" class="m-3">Convert</button>
+    <p class="m-3">Hasil konversi Reamur ke Celcius adalah: <span id="hasil"></span></p>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script>
+        function convertReamurToCelcius() {
+            var reamur = document.getElementById("reamur").value
+            var celcius = 5/4 * reamur
+            document.getElementById('hasil').className = "alert alert-primary m-3"
+            document.getElementById('hasil').innerHTML = (`${celcius}`)
+        }
+    </script>
+
+  </body>
+</html>
